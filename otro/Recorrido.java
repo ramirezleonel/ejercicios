@@ -3,6 +3,7 @@ package aplicacion.otro;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Stack;
 
 public class Recorrido {
@@ -13,12 +14,49 @@ public class Recorrido {
         pila.push(primero);
         while (!pila.isEmpty()) {
             Nodo aux = pila.pop();
-            if (!visitados.contains(aux)) {
+            if (!aux.isVisitado()) {
                 visitados.add(aux);
+                aux.setVisitado(true);
                 for (Nodo nodos : aux.getVecinos()) {
                     pila.push(nodos);
                 }
             }
+        }
+        for (Nodo visitado : visitados) {
+            System.out.println(visitado);
+        }
+
+    }
+
+    public void BFS(Nodo nodoInicio) {
+        Queue<Nodo> cola = new LinkedList<Nodo>();
+        List<Nodo> visitados = new ArrayList<>();
+        cola.add(nodoInicio);
+        while (!cola.isEmpty()) {
+            Nodo aux = cola.poll();
+            if (!aux.isVisitado()) {
+                visitados.add(aux);
+                aux.setVisitado(true);
+                for (Nodo e : aux.getVecinos()) {
+                    if (!e.isVisitado()) {
+                        cola.add(e);
+                        visitados.add(e);
+                        e.setVisitado(true);
+                    }
+
+                }
+
+            } else {
+                for (Nodo e : aux.getVecinos()) {
+                    if (!e.isVisitado()) {
+                        cola.add(e);
+                        visitados.add(e);
+                        e.setVisitado(true);
+                    }
+                }
+
+            }
+
         }
         for (Nodo visitado : visitados) {
             System.out.println(visitado);

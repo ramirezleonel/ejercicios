@@ -17,9 +17,9 @@ public class Grafo {
         nodoC.agregarVecinos(nodoE);
         nodoC.agregarVecinos(nodoF);
         Recorrido r=new Recorrido();
-//      r.dfs(nodoA);
-      r.recorridoProfundidad(nodoA);
-    
+
+      //r.recorridoProfundidad(nodoA);
+       r.BFS(nodoA);
         
         
         
