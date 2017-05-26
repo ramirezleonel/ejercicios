@@ -1,0 +1,9 @@
+c:\users\usuario\documents\visual studio 2012\Projects\proyecto\proyecto\bin\Debug\proyecto.exe.config
+c:\users\usuario\documents\visual studio 2012\Projects\proyecto\proyecto\bin\Debug\proyecto.exe
+c:\users\usuario\documents\visual studio 2012\Projects\proyecto\proyecto\bin\Debug\proyecto.pdb
+c:\users\usuario\documents\visual studio 2012\Projects\proyecto\proyecto\obj\Debug\proyecto.csprojResolveAssemblyReference.cache
+c:\users\usuario\documents\visual studio 2012\Projects\proyecto\proyecto\obj\Debug\proyecto.Properties.Resources.resources
+c:\users\usuario\documents\visual studio 2012\Projects\proyecto\proyecto\obj\Debug\proyecto.csproj.GenerateResource.Cache
+c:\users\usuario\documents\visual studio 2012\Projects\proyecto\proyecto\obj\Debug\proyecto.exe
+c:\users\usuario\documents\visual studio 2012\Projects\proyecto\proyecto\obj\Debug\proyecto.pdb
+c:\users\usuario\documents\visual studio 2012\Projects\proyecto\proyecto\obj\Debug\proyecto.Formulario.resources

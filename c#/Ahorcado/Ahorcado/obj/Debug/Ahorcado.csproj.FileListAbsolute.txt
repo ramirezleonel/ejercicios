@@ -1,0 +1,7 @@
+c:\users\leo\documents\visual studio 2012\Projects\Ahorcado\Ahorcado\bin\Debug\Ahorcado.exe.config
+C:\Users\LEO\documents\visual studio 2012\Projects\Ahorcado\Ahorcado\bin\Debug\Ahorcado.exe
+C:\Users\LEO\documents\visual studio 2012\Projects\Ahorcado\Ahorcado\bin\Debug\Ahorcado.pdb
+C:\Users\LEO\documents\visual studio 2012\Projects\Ahorcado\Ahorcado\bin\Debug\AhorcadoPalabras.dll
+C:\Users\LEO\documents\visual studio 2012\Projects\Ahorcado\Ahorcado\obj\Debug\Ahorcado.csprojResolveAssemblyReference.cache
+C:\Users\LEO\documents\visual studio 2012\Projects\Ahorcado\Ahorcado\obj\Debug\Ahorcado.exe
+C:\Users\LEO\documents\visual studio 2012\Projects\Ahorcado\Ahorcado\obj\Debug\Ahorcado.pdb
