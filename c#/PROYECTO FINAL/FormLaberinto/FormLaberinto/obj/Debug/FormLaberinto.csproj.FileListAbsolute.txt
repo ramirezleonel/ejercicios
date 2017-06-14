@@ -1,0 +1,9 @@
+c:\users\leo\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\bin\Debug\FormLaberinto.exe.config
+c:\users\leo\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\bin\Debug\FormLaberinto.exe
+c:\users\leo\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\bin\Debug\FormLaberinto.pdb
+c:\users\leo\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.csprojResolveAssemblyReference.cache
+c:\users\leo\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.Form1.resources
+c:\users\leo\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.Properties.Resources.resources
+c:\users\leo\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.csproj.GenerateResource.Cache
+c:\users\leo\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.exe
+c:\users\leo\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.pdb

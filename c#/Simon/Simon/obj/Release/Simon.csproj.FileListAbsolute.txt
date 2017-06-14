@@ -1,0 +1,8 @@
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\bin\Release\Simon.exe.config
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\bin\Release\Simon.exe
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\bin\Release\Simon.pdb
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\obj\Release\Simon.Form1.resources
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\obj\Release\Simon.Properties.Resources.resources
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\obj\Release\Simon.csproj.GenerateResource.Cache
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\obj\Release\Simon.exe
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\obj\Release\Simon.pdb

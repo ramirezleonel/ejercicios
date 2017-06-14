@@ -1,0 +1,9 @@
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\bin\Debug\Simon.exe.config
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\bin\Debug\Simon.exe
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\bin\Debug\Simon.pdb
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\obj\Debug\Simon.csprojResolveAssemblyReference.cache
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\obj\Debug\Simon.Form1.resources
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\obj\Debug\Simon.Properties.Resources.resources
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\obj\Debug\Simon.csproj.GenerateResource.Cache
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\obj\Debug\Simon.exe
+c:\users\leo\documents\visual studio 2012\Projects\Simon\Simon\obj\Debug\Simon.pdb

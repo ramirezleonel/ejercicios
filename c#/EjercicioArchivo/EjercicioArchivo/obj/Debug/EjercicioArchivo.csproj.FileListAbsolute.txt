@@ -1,0 +1,9 @@
+c:\users\leo\documents\visual studio 2012\Projects\EjercicioArchivo\EjercicioArchivo\bin\Debug\EjercicioArchivo.exe.config
+c:\users\leo\documents\visual studio 2012\Projects\EjercicioArchivo\EjercicioArchivo\bin\Debug\EjercicioArchivo.exe
+c:\users\leo\documents\visual studio 2012\Projects\EjercicioArchivo\EjercicioArchivo\bin\Debug\EjercicioArchivo.pdb
+c:\users\leo\documents\visual studio 2012\Projects\EjercicioArchivo\EjercicioArchivo\obj\Debug\EjercicioArchivo.csprojResolveAssemblyReference.cache
+c:\users\leo\documents\visual studio 2012\Projects\EjercicioArchivo\EjercicioArchivo\obj\Debug\EjercicioArchivo.Form1.resources
+c:\users\leo\documents\visual studio 2012\Projects\EjercicioArchivo\EjercicioArchivo\obj\Debug\EjercicioArchivo.Properties.Resources.resources
+c:\users\leo\documents\visual studio 2012\Projects\EjercicioArchivo\EjercicioArchivo\obj\Debug\EjercicioArchivo.csproj.GenerateResource.Cache
+c:\users\leo\documents\visual studio 2012\Projects\EjercicioArchivo\EjercicioArchivo\obj\Debug\EjercicioArchivo.exe
+c:\users\leo\documents\visual studio 2012\Projects\EjercicioArchivo\EjercicioArchivo\obj\Debug\EjercicioArchivo.pdb
