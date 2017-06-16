@@ -15,12 +15,14 @@ namespace FormLaberinto
 		public static int kCellSize = 10;
 		public static int kPadding = 20;//la distancia con respecto al form
 		public int[] Walls  = new int[4]{1, 1, 1, 1};
+        
+
 		public int Row;
 		public int Column;
 		private static long Seed = 	DateTime.Now.Ticks;//se usa unicamente para el random
 		static public Random TheRandom = new Random((int)Cell.Seed);
-		
-		
+
+        public Point[] coleccionPuntos;
 		public Cell()
 		{
 			//
@@ -51,6 +53,7 @@ namespace FormLaberinto
 			Walls[theWallToKnockDown] = 0;
 			int oppositeWall = (theWallToKnockDown + 2) % 4;
 			theCell.Walls[oppositeWall] = 0;
+
 		}
 
 
@@ -90,8 +93,18 @@ namespace FormLaberinto
 
 		public void Draw(Graphics g)
 		{
+            coleccionPuntos=new Point[4];
+            coleccionPuntos[0].X= Row*kCellSize + kPadding;//punto esquina superior izq
+            coleccionPuntos[0].Y = Column * kCellSize + kPadding;
+            coleccionPuntos[1].X = (Row + 1) * kCellSize + kPadding;//punto esquina inferior izq
+            coleccionPuntos[1].Y = Column * kCellSize +kPadding;
+            coleccionPuntos[2].X = Row * kCellSize + kPadding;//punto esquina superior der
+            coleccionPuntos[2].Y = (Column + 1) * kCellSize + kPadding;
+            coleccionPuntos[3].X=(Row+1)*kCellSize + kPadding;
+            coleccionPuntos[3].Y = (Column + 1) * kCellSize + kPadding;//punto esquina inferior der
 			if (Walls[0] == 1)
 			{
+                                
                 //drawline (lapiz,float cordenada1x,cordenada1y,cordenada2x,cordenada2y)
                 //padding relleno 
                 //padding es la distancia que hay con respecto al form

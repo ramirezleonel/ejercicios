@@ -12,40 +12,56 @@ namespace FormLaberinto
 {
     public partial class Form1 : Form
     {
-     
-        private Maze TheMaze = new Maze();
+        Graphics g;
+        
+
+        private Maze TheMaze;
         public Form1()
         {
+            //creo el laberinto
+            TheMaze = new Maze();
 
 
-            TheMaze.Generate();
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           Graphics g = this.CreateGraphics();
-            
-            g.FillRectangle(Brushes.White, ClientRectangle);
-          
-            TheMaze.Draw(g);
 
+            TheMaze.Initialize();
+            //TheMaze.Generate();
+            g = pictureBox1.CreateGraphics();
+
+            g.FillRectangle(Brushes.White, ClientRectangle);
 
             //dimensiones del laberinto ya resuelto
-            Maze.kDimension = 30;
-            Cell.kCellSize = 10;
-            
-            TheMaze.Initialize();
+
+            //Cell.kCellSize = 10;
+
             TheMaze.Generate();
+            TheMaze.Draw(g);
+            //encuentra el punto de inicio y fin de forma aleatoria
+            TheMaze.encontrarInicioFin(g);
+           
             g.Dispose();
-            
+
         }
 
-      
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+
     }
+
 }

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System;                                                               
 using System.Collections;
 using System.Drawing;
 using System.Linq;
@@ -12,13 +12,17 @@ namespace FormLaberinto
     /// </summary>
     public class Maze
     {
-        public static int kDimension = 30;
-        Cell[,] Cells = null;
+        public static int kDimension = 20;
+        public Cell[,] Cells ;
         Stack CellStack = new Stack();
         int VisitedCells = 1;
         int TotalCells = kDimension * kDimension;
         Cell CurrentCell = null;
+        Random random;
+        public static Cell inicio;
+        public static Cell fin;
 
+                            
         public Maze()
         {
             //
@@ -30,7 +34,7 @@ namespace FormLaberinto
         private ArrayList GetNeighborsWithWalls(Cell aCell)
         {
             ArrayList Neighbors = new ArrayList();
-            int count = 0;
+            
             for (int countRow = -1; countRow <= 1; countRow++)
                 for (int countCol = -1; countCol <= 1; countCol++)
                 {
@@ -96,7 +100,23 @@ namespace FormLaberinto
 
             }
         }
+        
+        public void encontrarInicioFin(Graphics g)
+        {
+            random = new Random();
+            int aleatorio;
+            Pen lapiz=Pens.Red;
+            
+            aleatorio = this.random.Next(0, kDimension-1);
+            inicio = Cells[0, aleatorio];
+            //coleccionPuntos[0]= esquina superior izq
+                g.DrawRectangle(lapiz, Cells[0, aleatorio].coleccionPuntos[0].X, Cells[0, aleatorio].coleccionPuntos[0].Y, 10, 10);
+                aleatorio = this.random.Next(0, kDimension - 1);
 
+                fin = Cells[kDimension-1, aleatorio];
+            //coleccionPuntos[2]= esquina superior derecha
+                g.DrawRectangle(lapiz, Cells[kDimension-1, aleatorio].coleccionPuntos[2].X, Cells[kDimension-1, aleatorio].coleccionPuntos[2].Y, 10, 10);
+        }
 
         public void Draw(Graphics g)
         {
