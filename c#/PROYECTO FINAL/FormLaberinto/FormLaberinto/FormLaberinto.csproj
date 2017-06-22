@@ -51,11 +51,48 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPresentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPresentacion.Designer.cs">
+      <DependentUpon>FormPresentacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Maze.cs" />
+    <Compile Include="ModoDeJuego2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModoDeJuego2.Designer.cs">
+      <DependentUpon>ModoDeJuego2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModoDeJuego3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModoDeJuego3.Designer.cs">
+      <DependentUpon>ModoDeJuego3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Niveles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Niveles.Designer.cs">
+      <DependentUpon>Niveles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tiempo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPresentacion.resx">
+      <DependentUpon>FormPresentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModoDeJuego2.resx">
+      <DependentUpon>ModoDeJuego2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModoDeJuego3.resx">
+      <DependentUpon>ModoDeJuego3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Niveles.resx">
+      <DependentUpon>Niveles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

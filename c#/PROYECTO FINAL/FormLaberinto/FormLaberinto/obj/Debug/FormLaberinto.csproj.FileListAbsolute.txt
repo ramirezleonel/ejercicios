@@ -7,3 +7,7 @@ c:\users\leo\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\o
 c:\users\leo\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.csproj.GenerateResource.Cache
 c:\users\leo\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.exe
 c:\users\leo\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.pdb
+C:\Users\LEO\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.FormPresentacion.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.ModoDeJuego3.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.ModoDeJuego2.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.Niveles.resources

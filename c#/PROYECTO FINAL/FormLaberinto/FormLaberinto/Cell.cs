@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 namespace FormLaberinto
 {
@@ -12,9 +11,16 @@ namespace FormLaberinto
 	/// </summary>
 	public class Cell
 	{
-		public static int kCellSize = 10;
+        public bool visitada { get; set; }
+		public static int kCellSize = 20;
 		public static int kPadding = 20;//la distancia con respecto al form
-		public int[] Walls  = new int[4]{1, 1, 1, 1};
+        /// <summary>
+        /// pos0=linea horizontal superior
+        /// pos1=linea vertical izquierda\
+        /// pos2=linea horizontal inferior\
+        /// pos3=linea vertical derecha\
+        /// </summary>
+        public int[] Walls = new int[4] { 1, 1, 1, 1 };
         
 
 		public int Row;
@@ -29,7 +35,7 @@ namespace FormLaberinto
 			// TODO: Add constructor logic here
 			//
 		}
-        //tiene todas las paredes
+        //tiene todas las paredes retorna true
 		public bool HasAllWalls()
 		{
 			for (int i = 0; i < 4; i++)
@@ -41,17 +47,17 @@ namespace FormLaberinto
 			return true;
 		}
 
-		public void KnockDownWall(int theWall)
+		public void KnockDownWallfafab(int theWall)
 		{
 			Walls[theWall] = 0;
 		}
 
 		public void KnockDownWall(Cell theCell)
 		{
-			// find adjacent wall
+			// encuentra su adyacente
 			int theWallToKnockDown = FindAdjacentWall(theCell);
-			Walls[theWallToKnockDown] = 0;
-			int oppositeWall = (theWallToKnockDown + 2) % 4;
+			Walls[theWallToKnockDown] = 0;//le paso la pared que quiero derribar
+			int oppositeWall = (theWallToKnockDown + 2) % 4;//devuelve el resto de la pared a derribar +2 /4
 			theCell.Walls[oppositeWall] = 0;
 
 		}
@@ -59,6 +65,8 @@ namespace FormLaberinto
 
 		public  int FindAdjacentWall(Cell theCell)
 		{
+            //encuentra su adyacente
+            // esta en la misma fila
 			if (theCell.Row == Row) 
 			{
 				if (theCell.Column < Column)
@@ -66,7 +74,7 @@ namespace FormLaberinto
 				else
 					return 2;
 			}
-			else // columns are the same
+			else // esta en la misma columna
 			{
 				if (theCell.Row < Row)
 					return 1;
@@ -75,30 +83,17 @@ namespace FormLaberinto
 			}
 		}
 
-		public int GetRandomWall()
-		{
-			int nextWall = TheRandom.Next(0, 3);
-			while ( (Walls[nextWall] == 0)  
-			||		((Row == 0) && (nextWall == 0)) ||
-					((Row == Maze.kDimension - 1) && (nextWall == 2)) ||
-					((Column == 0) && (nextWall == 1)) ||
-					((Column == Maze.kDimension - 1) && (nextWall == 3)) 
-				   )
-			{
-				nextWall = TheRandom.Next(0, 3);
-			}
-
-			return nextWall;
-		}
+		
 
 		public void Draw(Graphics g)
 		{
+            Pen lapiz = new Pen(Color.Blue, 5);
             coleccionPuntos=new Point[4];
             coleccionPuntos[0].X= Row*kCellSize + kPadding;//punto esquina superior izq
             coleccionPuntos[0].Y = Column * kCellSize + kPadding;
-            coleccionPuntos[1].X = (Row + 1) * kCellSize + kPadding;//punto esquina inferior izq
+            coleccionPuntos[1].X = (Row + 1) * kCellSize + kPadding;//punto esquina superior der
             coleccionPuntos[1].Y = Column * kCellSize +kPadding;
-            coleccionPuntos[2].X = Row * kCellSize + kPadding;//punto esquina superior der
+            coleccionPuntos[2].X = Row * kCellSize + kPadding;//punto esquina inferior izq
             coleccionPuntos[2].Y = (Column + 1) * kCellSize + kPadding;
             coleccionPuntos[3].X=(Row+1)*kCellSize + kPadding;
             coleccionPuntos[3].Y = (Column + 1) * kCellSize + kPadding;//punto esquina inferior der
@@ -108,28 +103,35 @@ namespace FormLaberinto
                 //drawline (lapiz,float cordenada1x,cordenada1y,cordenada2x,cordenada2y)
                 //padding relleno 
                 //padding es la distancia que hay con respecto al form
-				g.DrawLine(Pens.Blue, Row*kCellSize + kPadding, Column*kCellSize + kPadding, (Row+1) * kCellSize   + kPadding, Column*kCellSize +  + kPadding);
-			//linea vertical izq
+				g.DrawLine(lapiz, Row*kCellSize + kPadding, Column*kCellSize + kPadding, (Row+1) * kCellSize   + kPadding, Column*kCellSize +  + kPadding);
+			//linea horizontal superior
             }
 			if (Walls[1] == 1)
 			{
-				g.DrawLine(Pens.Blue, Row*kCellSize  + kPadding, Column*kCellSize + kPadding, Row*kCellSize + kPadding, (Column+1)*kCellSize + kPadding);
-                //linea horizontal superior
+				g.DrawLine(lapiz, Row*kCellSize  + kPadding, Column*kCellSize + kPadding, Row*kCellSize + kPadding, (Column+1)*kCellSize + kPadding);
+                //linea vertical izquierda
             }
 			if (Walls[2] == 1)
 			{
-				g.DrawLine(Pens.Blue, Row*kCellSize + kPadding, (Column+1)*kCellSize + kPadding, (Row+1)*kCellSize + kPadding, (Column+1)*kCellSize + kPadding);
-                //linea vertical der
+				g.DrawLine(lapiz, Row*kCellSize + kPadding, (Column+1)*kCellSize + kPadding, (Row+1)*kCellSize + kPadding, (Column+1)*kCellSize + kPadding);
+                //linea horizontal inferior 
             }
 			if (Walls[3] == 1)
 			{
 			
-                g.DrawLine(Pens.Blue,(Row+1)*kCellSize + kPadding , Column*kCellSize + kPadding, (Row+1)*kCellSize + kPadding, (Column+1)*kCellSize + kPadding);
-                //linea horizontal inferior
+                g.DrawLine(lapiz,(Row+1)*kCellSize + kPadding , Column*kCellSize + kPadding, (Row+1)*kCellSize + kPadding, (Column+1)*kCellSize + kPadding);
+                //linea vertical derecha
             }
 
 
 
 		}
-	}
+
+        public bool isVisitado()
+        {
+            return visitada;
+        }
+
+      
+    }
 }
