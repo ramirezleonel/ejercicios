@@ -43,7 +43,7 @@ namespace FormLaberinto
             TheMaze.Draw(g);
             //encuentra el punto de inicio y fin de forma aleatoria
             TheMaze.encontrarInicioFin(g);
-            celdaMovil = Maze.inicio;
+            celdaMovil = TheMaze.inicio;
           
             //si el laberinto esta generado va a hacer true
             generado = true;
@@ -116,7 +116,7 @@ namespace FormLaberinto
           
           
            
-            if (Maze.fin.Column+1 == celdaMovil.Column && Maze.fin.Row == celdaMovil.Row) {
+            if (TheMaze.fin.Column+1 == celdaMovil.Column && TheMaze.fin.Row == celdaMovil.Row) {
                 lblTemp.Enabled = false;
                 MessageBox.Show("Haz ganado \n"+" tu tiempo es: "+tiempo.Hora.ToString().PadLeft(2,'0')+":"+tiempo.Min.ToString().PadLeft(2,'0')+":"+tiempo.Seg.ToString().PadLeft(2,'0'));
                 g.Dispose();
@@ -130,7 +130,7 @@ namespace FormLaberinto
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            button1.Enabled = false;
         }
 
         private void btnRecorrer_Click(object sender, EventArgs e)
@@ -179,7 +179,7 @@ namespace FormLaberinto
 
         private void cbDimensiones_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            button1.Enabled = true;
         }
 
         private void label2_Click(object sender, EventArgs e)

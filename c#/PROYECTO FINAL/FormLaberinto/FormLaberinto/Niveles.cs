@@ -36,7 +36,7 @@ namespace FormLaberinto
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ModoDeJuego2 mdj2 = new ModoDeJuego2(200);
+            ModoDeJuego2 mdj2 = new ModoDeJuego2(150);
             this.Hide();
             mdj2.ShowDialog();
             this.Close();

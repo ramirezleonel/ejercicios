@@ -118,6 +118,7 @@
             this.lblTiempo2.Size = new System.Drawing.Size(49, 13);
             this.lblTiempo2.TabIndex = 7;
             this.lblTiempo2.Text = "00:00:00";
+           
             // 
             // TiempoRecorrido
             // 

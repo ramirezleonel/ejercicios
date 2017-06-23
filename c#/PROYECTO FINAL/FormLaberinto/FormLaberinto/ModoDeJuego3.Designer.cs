@@ -38,9 +38,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnJugar = new System.Windows.Forms.Button();
+            this.TiempoRecorrido1 = new System.Windows.Forms.Timer(this.components);
+            this.TiempoRecorrido2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick_1);
             // 
             // Computer1
             // 
@@ -105,6 +115,14 @@
             this.btnJugar.UseVisualStyleBackColor = true;
             this.btnJugar.Click += new System.EventHandler(this.btnJugar_Click);
             // 
+            // TiempoRecorrido1
+            // 
+            this.TiempoRecorrido1.Tick += new System.EventHandler(this.TiempoRecorrido1_Tick);
+            // 
+            // TiempoRecorrido2
+            // 
+            this.TiempoRecorrido2.Tick += new System.EventHandler(this.TiempoRecorrido2_Tick);
+            // 
             // ModoDeJuego3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,6 +140,7 @@
             this.Name = "ModoDeJuego3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModoDeJuego3";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ModoDeJuego3_FormClosed);
             this.Load += new System.EventHandler(this.ModoDeJuegoCom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -141,5 +160,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnJugar;
+        private System.Windows.Forms.Timer TiempoRecorrido1;
+        private System.Windows.Forms.Timer TiempoRecorrido2;
     }
 }

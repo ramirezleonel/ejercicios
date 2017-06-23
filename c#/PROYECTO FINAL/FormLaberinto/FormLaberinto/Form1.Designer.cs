@@ -88,6 +88,7 @@
             // 
             // cbDimensiones
             // 
+            this.cbDimensiones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDimensiones.FormattingEnabled = true;
             this.cbDimensiones.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cbDimensiones.Items.AddRange(new object[] {
@@ -98,7 +99,6 @@
             this.cbDimensiones.Name = "cbDimensiones";
             this.cbDimensiones.Size = new System.Drawing.Size(121, 21);
             this.cbDimensiones.TabIndex = 5;
-            this.cbDimensiones.Text = "5";
             this.cbDimensiones.SelectedIndexChanged += new System.EventHandler(this.cbDimensiones_SelectedIndexChanged);
             // 
             // Form1

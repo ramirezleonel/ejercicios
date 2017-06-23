@@ -20,8 +20,8 @@ namespace FormLaberinto
         int TotalCells = kDimension * kDimension;
         Cell CurrentCell = null;
         Random random;
-        public static Cell inicio;
-        public static Cell fin;
+         public Cell inicio;
+        public Cell fin;
 
                             
         public Maze()
@@ -70,6 +70,7 @@ namespace FormLaberinto
                     Cells[i, j] = new Cell();
                     Cells[i, j].Row = i;
                     Cells[i, j].Column = j;
+                    Cells[i, j].visitada = false;
                 }
 
             CurrentCell = Cells[0, 0];
@@ -104,34 +105,9 @@ namespace FormLaberinto
 
             }
         }
-        public void recorrer(Cell comienzo,Cell fin) {
-            Cell celda=comienzo;
-            
-            while ( celda!= fin)
-            {
-                // get a list of the neighboring cells with all walls intact
-                ArrayList AdjacentCells = GetNeighborsWithWalls(CurrentCell);
-                // test if a cell like this exists
-                if (AdjacentCells.Count > 0)
-                {
-                    // yes, choose one of them, and knock down the wall between it and the current cell
-                    int randomCell = Cell.TheRandom.Next(0, AdjacentCells.Count);
-                    Cell theCell = ((Cell)AdjacentCells[randomCell]);
-                    CurrentCell.KnockDownWall(theCell);
-                    CellStack.Push(CurrentCell); // push the current cell onto the stack
-                    CurrentCell = theCell; // make the random neighbor the new current cell
-                    VisitedCells++;
-                }
-                else
-                {
-                    // No cells with walls intact, pop current cell from stack
-                    CurrentCell = (Cell)CellStack.Pop();
-                }
+       
 
-            }
-        
-        
-        }
+       
         public void encontrarInicioFin(Graphics g)
         {
             
@@ -155,26 +131,26 @@ namespace FormLaberinto
         {
 
             int tamañoCelda = Cell.kCellSize - 5;
-            Stack<Cell> pila = new Stack<Cell>();
+            Stack<Cell> pila = new Stack<Cell>();//genero un stack para poder volver al estado anterior
             List<Cell> visitados = new List<Cell>();//lista de las celdas visitadas hasta llegar al final
-            pila.Push(inicio);
+            pila.Push(inicio);//agrego la celda inicio para empezar a saber sus vecinos
             while (pila.Count != 0)//mientras que la pila no esté vacio
             {
                 Cell aux = pila.Pop();
                 if (!aux.isVisitado())
                 {
-                    visitados.Add(aux);
+                    visitados.Add(aux);//agrego a la lista la celda que quiero conocer sus vecinos
                     aux.visitada = true;
-                    //encontro?? el final??
+                    // si encontro?? el final??
                     if (aux.Column == fin.Column+1 && aux.Row == fin.Row)
                     {
                         
-                        return visitados;
+                        return visitados;//retorno la lista de todos los visitados
                     }
                     
                     foreach (Cell celda in getVecinos(aux))
                     {
-                        pila.Push(celda);
+                        pila.Push(celda);//agrega sus vecinos que no tengan paredes unidas a ésta
                     }
                 }
             }
@@ -185,10 +161,15 @@ namespace FormLaberinto
 
         public List<Cell> getVecinos(Cell celdaActual)
         {
-            List<Cell> vecinos = new List<Cell>();
+            int ran = 0;
+            Random random = new Random();
+            List<Cell> aux = new List<Cell>();
+            List<Cell> vecinos = new List<Cell>();//creo una lista para usarlo como auxiliar y retornarlo
+
+            //revisa la celda izquierda,dentro de las dimensiones del laberinto
             if (celdaActual.Row - 1 >= 0)
             {
-                //si la linea vertical izquierda esta derribado
+                //si la linea vertical izquierda con respecto a la celda actual,esta derribado
                 if (Cells[celdaActual.Row, celdaActual.Column].Walls[1] == 0)
                 {
                     //agrego en la lista de vecinos la celda izquierda con respecto a celdaActual
@@ -197,9 +178,10 @@ namespace FormLaberinto
                 }
 
             }
+            //revisa la celda derecha,dentro de las dimensiones del laberinto
             if (celdaActual.Row + 1 <= kDimension - 1)
             {
-                //si la linea vertical derecha esta derribado
+                //si la linea vertical derecha con respecto a la celda actual esta derribado
                 if (Cells[celdaActual.Row, celdaActual.Column].Walls[3] == 0)
                 {
                     //agrego en la lista de vecinos la celda derecha con respecto a celdaActual
@@ -208,6 +190,7 @@ namespace FormLaberinto
                 }
 
             }
+            //revisa la celda inferior, con respecto a la celda actual dentro de las dimensiones del laberinto
             if (celdaActual.Column + 1 <= kDimension - 1)
             {
                 //si la linea vertical derecha esta derribado
@@ -219,6 +202,7 @@ namespace FormLaberinto
                 }
 
             }
+            //revisa la celda superior,con respecto a la celda actual dentro de las dimensiones del laberinto
             if (celdaActual.Column - 1 >= 0)
             {
                 //si la linea horizontal inferior esta derribado
@@ -230,8 +214,32 @@ namespace FormLaberinto
                 }
 
             }
-            return vecinos;
-        }      
+
+            while (vecinos.Count > 0)
+            {
+                ran = random.Next(0, vecinos.Count);
+                aux.Add(vecinos[ran]);
+                vecinos.RemoveAt(ran);
+            }
+            return aux;
+        }
+        public void asignarMismoLaberinto(Maze copia) {
+
+            for (int i = 0; i < kDimension; i++)
+            {
+                for (int j = 0; j < kDimension; j++)
+                {
+                    copia.Cells[i, j].coleccionPuntos = Cells[i,j].coleccionPuntos;
+                    copia.Cells[i, j].Walls = Cells[i, j].Walls;
+                    copia.Cells[i, j].visitada = false ;
+                    
+                    Cells[i, j].Row = i;
+                    Cells[i, j].Column = j;
+                }
+            }
+            
+        
+        }
         public void Draw(Graphics g)
         {
             //construye las celdas segun su posicion

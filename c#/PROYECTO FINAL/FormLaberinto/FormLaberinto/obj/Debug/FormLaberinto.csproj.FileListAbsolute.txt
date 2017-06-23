@@ -11,3 +11,17 @@ C:\Users\LEO\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\o
 C:\Users\LEO\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.ModoDeJuego3.resources
 C:\Users\LEO\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.ModoDeJuego2.resources
 C:\Users\LEO\documents\visual studio 2012\Projects\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.Niveles.resources
+C:\visual\FormLaberinto\FormLaberinto\bin\Debug\FormLaberinto.exe.config
+C:\visual\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.exe
+C:\visual\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.pdb
+C:\visual\FormLaberinto\FormLaberinto\bin\Debug\FormLaberinto.exe
+C:\visual\FormLaberinto\FormLaberinto\bin\Debug\FormLaberinto.pdb
+C:\visual\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.csprojResolveAssemblyReference.cache
+C:\visual\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.Form1.resources
+C:\visual\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.FormPresentacion.resources
+C:\visual\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.ModoDeJuego2.resources
+C:\visual\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.ModoDeJuego3.resources
+C:\visual\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.Niveles.resources
+C:\visual\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.Properties.Resources.resources
+C:\visual\FormLaberinto\FormLaberinto\obj\Debug\FormLaberinto.csproj.GenerateResource.Cache
+C:\visual\FormLaberinto\FormLaberinto\bin\Debug\IAgent.dll
