@@ -1,0 +1,5 @@
+E:\Mis Documentos\SharpDevelop Projects\Parcial\Parcial\obj\Debug\Parcial.csprojResolveAssemblyReference.cache
+E:\Mis Documentos\SharpDevelop Projects\Parcial\Parcial\bin\Debug\Parcial.exe
+E:\Mis Documentos\SharpDevelop Projects\Parcial\Parcial\bin\Debug\Parcial.pdb
+E:\Mis Documentos\SharpDevelop Projects\Parcial\Parcial\obj\Debug\Parcial.exe
+E:\Mis Documentos\SharpDevelop Projects\Parcial\Parcial\obj\Debug\Parcial.pdb

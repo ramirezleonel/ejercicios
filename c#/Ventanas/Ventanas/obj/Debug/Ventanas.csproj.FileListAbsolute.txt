@@ -1,0 +1,10 @@
+E:\Mis Documentos\SharpDevelop Projects\Ventanas\Ventanas\bin\Debug\Ventanas.exe
+E:\Mis Documentos\SharpDevelop Projects\Ventanas\Ventanas\bin\Debug\Ventanas.pdb
+E:\Mis Documentos\SharpDevelop Projects\Ventanas\Ventanas\obj\Debug\Ventanas.csprojResolveAssemblyReference.cache
+E:\Mis Documentos\SharpDevelop Projects\Ventanas\Ventanas\obj\Debug\Ventanas.exe
+E:\Mis Documentos\SharpDevelop Projects\Ventanas\Ventanas\obj\Debug\Ventanas.pdb
+E:\Mis Documentos\SharpDevelop Projects\Ventanas\Ventanas\obj\Debug\Ventanas.Form2.resources
+E:\Mis Documentos\SharpDevelop Projects\Ventanas\Ventanas\obj\Debug\Ventanas.MainForm.resources
+E:\Mis Documentos\SharpDevelop Projects\Ventanas\Ventanas\obj\Debug\Ventanas.csproj.GenerateResource.Cache
+E:\Mis Documentos\SharpDevelop Projects\Ventanas\Ventanas\obj\Debug\Ventanas.Inicial.resources
+E:\Mis Documentos\SharpDevelop Projects\Ventanas\Ventanas\obj\Debug\Ventanas.FormTERCERNIVEL.resources
