@@ -1,0 +1,6 @@
+c:\users\rubén leiva\documents\visual studio 2017\Projects\Agente\Agente\bin\Debug\Agente.dll
+c:\users\rubén leiva\documents\visual studio 2017\Projects\Agente\Agente\bin\Debug\Agente.pdb
+c:\users\rubén leiva\documents\visual studio 2017\Projects\Agente\Agente\bin\Debug\IAgent.dll
+c:\users\rubén leiva\documents\visual studio 2017\Projects\Agente\Agente\obj\Debug\Agente.csprojResolveAssemblyReference.cache
+c:\users\rubén leiva\documents\visual studio 2017\Projects\Agente\Agente\obj\Debug\Agente.dll
+c:\users\rubén leiva\documents\visual studio 2017\Projects\Agente\Agente\obj\Debug\Agente.pdb
