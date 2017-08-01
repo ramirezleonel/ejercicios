@@ -10,7 +10,13 @@ public final class UsuarioUtility {
 
     }
 
-    public static int ingresePosicion()  {
+    public static void ingreseEnter() {
+        Scanner tec = new Scanner(System.in);
+        System.out.println("ingrese enter para Salir...");
+        tec.nextLine();
+    }
+
+    public static int ingresePosicion() {
         boolean bandera = false;
         Scanner tec;
         int pos = 0;
@@ -152,7 +158,7 @@ public final class UsuarioUtility {
 
             }
         } while (bandera == false);
-        
+
         return figura;
     }
 }

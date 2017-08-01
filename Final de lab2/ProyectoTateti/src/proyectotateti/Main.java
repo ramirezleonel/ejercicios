@@ -44,6 +44,7 @@ public class Main {
         }
         System.out.println("el juego termino");
         Puntuacion.compararPuntos(jugador1, jugador2);
+        UsuarioUtility.ingreseEnter();
     }
 
 }
